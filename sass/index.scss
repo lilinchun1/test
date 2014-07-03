@@ -1,0 +1,331 @@
+@charset "UTF-8";
+@import "rest";
+$warp-width:1000px; //定宽
+$con-left:188px;  //左侧边栏宽度
+$con-right:220px; //右侧边栏宽度
+$con-main:$warp-width - $con-left -$con-right;
+$border-color:#d9d9d9;
+%icon-list{
+  font-size: 40px;
+  color: #ffffff;
+}
+%border-3{
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+%trans{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-out 0s;-ms-transition: all .3s ease-in-out 0s; -o-transition: all .3s ease-in-out 0s;transition: all .3s ease-in-out 0s;}
+/*布局*/
+#warp {
+  margin: 0 auto;
+  border-right: 1px solid #e1e1e1;
+  width: $warp-width;
+  overflow: hidden;
+  background: #ffffff;
+}
+.top-banner{
+  height: 274px;
+  background: #cccccc;
+  overflow: hidden;}
+
+.con-left{
+  width: $con-left;
+  background: #fbfbfb;
+  float: left;}
+.con-right{
+  margin-right: -$con-left;
+  width: 100%;}
+.con-right-aside{
+  width: $con-right;
+  float: right;
+}
+.con-right-main{
+  width: $con-main - 22;
+  float: left;
+}
+
+/*左侧边栏*/
+.con-left-mode1 {
+  position: relative;
+  padding-bottom: 100px;
+  @extend %border-3;
+    p{
+      height: 28px;
+      line-height: 28px;
+      text-align: center;}
+    b{
+      font-size: 14px;
+      font-weight: bold;}
+    i{
+      color: #0a8cd2;}
+    span{
+      font-family: 'Microsoft Yahei';
+      font-size: 14px;
+      color: #858383;}
+    em{
+      color: #ff5d02;}
+}
+
+.show-pic{
+  position: absolute;
+  left: 16px;
+  top: -94px;
+  padding: 2px;
+  width: 150px;
+  height: 150px;
+  background: #ffffff;
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+    img{
+      width: 100%;}
+}
+
+.con-left-mode2{
+  padding: 15px 0;
+  @extend %border-3;
+    li{
+      padding-left: 20px;
+      height: 35px;
+      line-height: 35px;
+        a{
+          font-size: 14px;
+          padding-left: 10px;}
+        i{
+          margin-left: 6px;
+          padding: 1px 4px;
+          background: #fb631d;
+          color: #ffffff;}
+    }
+}
+.con-left-mode3{
+  @extend %border-3;
+  height: 44px;
+  line-height: 56px;
+  font-size: 16px;
+  color: #4c4c4c;
+  text-align: center;
+  font-family: 'Microsoft Yahei';
+}
+.con-left-mode4{
+  margin-top: 5px;
+  overflow: hidden;
+  li{
+    padding-top: 14px;
+    width: 94px;
+    height: 70px;
+    float: left;
+    text-align: center;
+    @extend %trans;
+      &:nth-child(1){
+        background: #06b2e9;
+      }
+      &:nth-child(2){
+        background: #80bc13;
+      }
+      &:nth-child(3){
+        background: #d562ff;
+      }
+      &:nth-child(4){
+        background: #fb631d;
+      }
+      &:hover{
+        opacity: 0.8;}
+      a{
+        height: 84px;
+        display: block;}
+      i{
+        padding-top: 12px;
+        display: block;
+        font-size: 14px;
+        color: #ffffff;}
+  }
+
+}
+/*icons*/
+.icon {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  color: #333;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+}
+.icon:after {
+  font-family: 'brankic1979';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.icon2 {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  color: #333;
+  width: 36px;
+  height: 32px;
+  line-height: 22px;
+  text-align: center;
+}
+.icon2:after {
+  font-family: 'brankic1979';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-location:after {
+  content:"\75";
+  color: #ffa922;
+  font-size: 22px;
+}
+.icon-comments:after {
+  content:"\39";
+  font-size: 20px;
+  color: #ffbb2a;
+}
+.icon-chat:after {
+  content:"\2c";
+  font-size: 20px;
+  color: #ffbb2a;
+}
+.icon-clipboard-2:after {
+  content:"\4a";
+  font-size: 20px;
+  color: #fb6d2b;
+}
+.icon-chat-2:after {
+  content:"\3a";
+  font-size: 20px;
+  color: #1eb9eb;
+}
+.icon-profile-3:after {
+  content:"\e0ca";
+  font-size: 20px;
+  color: #1eb9eb;
+}
+.icon-microwave:after {
+  content:"\e0a5";
+  @extend %icon-list;
+}
+.icon-library:after {
+  content:"\e0d2";
+  @extend %icon-list;
+}
+.icon-basket:after {
+  content:"\e098";
+  @extend %icon-list;
+}
+.icon-coffee:after {
+  content:"\e077";
+  @extend %icon-list;
+}
+@font-face {
+  font-family: 'brankic1979';
+  src:url('../fonts/brankic1979.eot');
+  src:url('../fonts/brankic1979.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/brankic1979.svg#brankic1979') format('svg'),
+  url('../fonts/brankic1979.woff') format('woff'),
+  url('../fonts/brankic1979.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*中间内容*/
+.signature{
+  height: 50px;
+  line-height: 50px;
+  background: #fbfbfb;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+    em{
+      padding-left: 22px;
+      color: #605b5b;}
+    i{
+      color: #ababab;
+    }
+}
+.con-right-main{
+  padding-left: 22px;
+  h2{
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;font-family: 'Microsoft Yahei';
+    color: #333333;}
+}
+.tab-tt{
+  height: 36px;
+  border-bottom: 1px solid $border-color;
+    li {
+      margin-bottom: -1px;
+      float: left;
+      width: 78px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      background: #f6f6f6;
+      color: #6e6e6e;
+      font-size: 14px;
+      border: 1px solid $border-color;
+      border-bottom: 0 none;
+      cursor: pointer;
+    }
+  .on{
+    height: 36px;
+    font-weight: bold;
+    background: #ffffff;
+    border-bottom: 0 none;
+  }
+}
+.tab-con .tab-message{
+  margin-top: 6px;
+  padding-left: 10px;
+  height: 38px;
+  line-height: 38px;
+  color: #fb631d;
+  background: #f9f9f9;}
+
+.tab-con{
+  li{
+    margin-top: 15px;
+    height: 94px;}
+  .h-pic{
+    width: 50px;
+    height: 50px;
+    float: left;
+    overflow: hidden;}
+  img{
+    width: 100%;}
+}
+.tab-con-wz{
+  padding: 12px 16px 25px 16px;
+  float: right;
+  width: 458px;
+  height: 53px;
+  border: 1px solid $border-color;
+    p{
+      width: 270px;
+      line-height: 20px;
+      color: #6e6e6e;
+        a{
+          color: #4e95e1;
+          font-size: 14px;
+          font-weight: bold;
+        }
+    }
+    .time{
+      margin-top: 5px;
+      float: left;
+      color: #b4b4b4;}
+    .action{
+      margin-top: 5px;
+      width: 90px;
+      float: right;
+        a{
+          color: #68a7eb;
+          padding-left: 10px;
+        }
+    }
+}
